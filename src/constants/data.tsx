@@ -92,12 +92,17 @@ export const roleData = [
   },
   {
     id: 2,
-    role: 'admin',
-    status: 'active',
+    role: 'superadmin',
+    status: 'inactive',
   },
   {
     id: 3,
-    role: 'admin',
+    role: 'caller',
+    status: 'inactive',
+  },
+  {
+    id: 4,
+    role: 'account',
     status: 'active',
   },
 ];
