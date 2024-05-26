@@ -1,3 +1,26 @@
+import { FaHouseUser, FaRegUserCircle, FaHandHoldingUsd } from 'react-icons/fa';
+
+export const navLinks = [
+  {
+    id: 1,
+    url: '/',
+    text: 'Home',
+    icon: <FaHouseUser />,
+  },
+  {
+    id: 2,
+    url: '/roles',
+    text: 'Roles',
+    icon: <FaHandHoldingUsd />,
+  },
+  {
+    id: 3,
+    url: '/users',
+    text: 'Users',
+    icon: <FaRegUserCircle />,
+  },
+];
+
 export const userDataHeader = [
   'id',
   'name',
