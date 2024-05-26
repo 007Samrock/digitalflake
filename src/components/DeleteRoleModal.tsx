@@ -1,10 +1,10 @@
 import { FaTriangleExclamation } from 'react-icons/fa6';
-import { useGlobalContext } from '../context/global_context';
+import { useRoleContext } from '../context/role_context';
 
 const DeleteRoleModal: React.FC<{ onConfirm: () => void }> = ({
   onConfirm,
 }) => {
-  const { closeRoleModal } = useGlobalContext();
+  const { closeRoleModal } = useRoleContext();
   return (
     <div className='bg-black/75 flex-center fixed inset-0 z-50 transition-all duration-300'>
       <article className='bg-red-white w-[90vw] max-w-xl py-8 bg-white'>

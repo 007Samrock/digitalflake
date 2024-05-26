@@ -1,25 +1,19 @@
 import {
   LOAD_ROLE_DATA,
-  SIDEBAR_CLOSE,
-  SIDEBAR_TOGGLE,
-  LOGOUT_MODAL_OPEN,
-  LOGOUT_MODAL_CLOSE,
   ROLE_MODAL_OPEN,
   ROLE_MODAL_CLOSE,
   ADD_ROLE,
   EDIT_ROLE,
   DELETE_ROLE,
-} from './context/actions';
+} from '../actions';
 
-// Global state interface
-export interface GlobalState {
+// Role state interface
+export interface RoleState {
   roleData: {
     id: number;
     role: string;
     status: string;
   }[];
-  isSidebarOpen: boolean;
-  isLogoutModalOpen: boolean;
   isRoleModalOpen: boolean;
   isRoleAdding: boolean;
   isRoleEditing: boolean;
@@ -27,11 +21,7 @@ export interface GlobalState {
 }
 
 // Unified action type
-export type Action =
-  | { type: typeof SIDEBAR_CLOSE }
-  | { type: typeof SIDEBAR_TOGGLE }
-  | { type: typeof LOGOUT_MODAL_OPEN }
-  | { type: typeof LOGOUT_MODAL_CLOSE }
+export type RoleAction =
   | { type: typeof ROLE_MODAL_OPEN }
   | { type: typeof ROLE_MODAL_CLOSE }
   | { type: typeof LOAD_ROLE_DATA }
@@ -53,12 +43,8 @@ export type Action =
     }
   | { type: typeof DELETE_ROLE; payload: number };
 
-// Global context interface with methods
-export interface GlobalContextType extends GlobalState {
-  closeSidebar: () => void;
-  toggleSidebar: () => void;
-  openLogoutModal: () => void;
-  closeLogoutModal: () => void;
+// Role context interface with methods
+export interface RoleContextType extends RoleState {
   openRoleModal: () => void;
   closeRoleModal: () => void;
   loadRoleData: () => void;

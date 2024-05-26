@@ -1,7 +1,7 @@
 import { FaRegTrashCan, FaRegPenToSquare } from 'react-icons/fa6';
 import { Link } from 'react-router-dom';
 import { roleDataHeader } from '../constants/data';
-import { useGlobalContext } from '../context/global_context';
+import { useRoleContext } from '../context/role_context';
 import DeleteRoleModal from './DeleteRoleModal';
 import { useState } from 'react';
 
@@ -14,7 +14,7 @@ const RoleTable = () => {
     deleteRole,
     roleData,
     editRole,
-  } = useGlobalContext();
+  } = useRoleContext();
   const [selectedRoleId, setSelectedRoleId] = useState<number | null>(null);
 
   const confirmDelete = () => {
@@ -71,15 +71,15 @@ const RoleTable = () => {
                       {status}
                     </td>
                     <td className='px-6 py-3 flex items-center gap-2 text-gray-500'>
-                      {/* <Link to='edit-role'>
+                      <Link to='edit-role'>
                         <FaRegPenToSquare />
-                      </Link> */}
-                      <button
+                      </Link>
+                      {/* <button
                         type='button'
-                        // onClick={() => editRole()}
+                        onClick={() => editRole()}
                       >
                         <FaRegPenToSquare />
-                      </button>
+                      </button> */}
                       <button
                         type='button'
                         onClick={() => handleDeleteRole(id)}

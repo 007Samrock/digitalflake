@@ -1,35 +1,15 @@
 import { roleData } from '../constants/data';
-import { GlobalState, Action } from '../types';
+import { RoleState, RoleAction } from '../types/role_types';
 import {
-  SIDEBAR_CLOSE,
-  SIDEBAR_TOGGLE,
-  LOGOUT_MODAL_OPEN,
-  LOGOUT_MODAL_CLOSE,
   LOAD_ROLE_DATA,
   ROLE_MODAL_OPEN,
   ROLE_MODAL_CLOSE,
   ADD_ROLE,
   EDIT_ROLE,
   DELETE_ROLE,
-} from './actions';
+} from '../actions';
 
-const global_reducer = (state: GlobalState, action: Action): GlobalState => {
-  if (action.type === SIDEBAR_CLOSE) {
-    return { ...state, isSidebarOpen: false };
-  }
-
-  if (action.type === SIDEBAR_TOGGLE) {
-    return { ...state, isSidebarOpen: !state.isSidebarOpen };
-  }
-
-  if (action.type === LOGOUT_MODAL_OPEN) {
-    return { ...state, isLogoutModalOpen: true };
-  }
-
-  if (action.type === LOGOUT_MODAL_CLOSE) {
-    return { ...state, isLogoutModalOpen: false };
-  }
-
+const role_reducer = (state: RoleState, action: RoleAction): RoleState => {
   if (action.type === LOAD_ROLE_DATA) {
     return {
       ...state,
@@ -77,4 +57,4 @@ const global_reducer = (state: GlobalState, action: Action): GlobalState => {
   throw new Error(`No Matching "${action}" - action type`);
 };
 
-export default global_reducer;
+export default role_reducer;
