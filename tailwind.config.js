@@ -8,9 +8,6 @@ export default {
         'primary-light': '#5C218B',
         secondary: '#FFF8B7',
       },
-      backgroundImage: {
-        'login-bg': "url('./src/assets/login-bg.png')",
-      },
     },
   },
   plugins: [],

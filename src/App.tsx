@@ -11,7 +11,7 @@ import {
   EditUserPage,
 } from './pages';
 import Layout from './components/Layout';
-import ForgetPassword from './components/ForgetPassword';
+import ForgetPassword from './pages/ForgetPasswordPage';
 
 const router = createBrowserRouter([
   {

@@ -22,7 +22,7 @@
   }
 
   .btn {
-    @apply w-full py-1 rounded-md text-white bg-primary transition-all flex-1 duration-300 hover:bg-primary-light;
+    @apply py-2 rounded-md text-white bg-primary transition-all duration-300 hover:bg-primary-light;
   }
 }
 
